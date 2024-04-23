@@ -1,0 +1,23 @@
+An association rule is a pattern that states when X occurs, Y occurs with a certain probability.
+X => Y where, X, Y belong to I, and X intersects Y is not NULL
+Association rule is not suitable for numeric data and assumes all data elements to be categorical.
+
+
+Apriori algorithm
+library(arules)
+Groceries_Item = read.transactions("Groceries.csv", sep = ",")
+AprioriForGroceries = apriori(Groceries_Item, parameter=list(support=.006,confidence=.5)
+summary(AprioriForGroceries)
+inspect(AprioriForGroceries) # lhs find the cause and rhs find the result
+
+inspect(sort(AprioriForGroceries, by="confidence")) # sort by confidence level
+
+Key Takeaways 
+Association rule mining finds interesting patterns in a dataset
+The interesting relationships can have two parameters: frequent item sets and association rules
+An association rule is a pattern that states when X occurs, Y occurs with a certain probability
+The measures of the strength of association rules are support and confidence
+Apriori is an algorithm for frequent item set mining and association rule learning over transactional databases
+The Apriori algorithm includes two steps: mining all frequent item sets and generating rules from frequent item sets
+
+Association rules are interesting if they satisfy both minimum support and minimum confidence thresholds
