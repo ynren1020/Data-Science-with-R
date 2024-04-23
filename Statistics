@@ -1,0 +1,28 @@
+Hypothesis ----
+
+Types of Hypothesis
+-Simple hypothesis
+-Complex hypothesis
+-Null hypothesis
+-Alternate hypothesis is used to decide whether to employ a one-tailed test or two-tailed test
+-Statistical hypothesis
+
+Data Sampling ----
+
+Data sampling is a statistical hypothesis technique used to select, manipulate, and analyze a subset of data points to discover hidden patterns and trends in the larger data set.
+The sampling theory draws valid inferences about the population parameters on the basis of sample results.
+
+Types of Errors 
+Type I Error - reject H0 when it is true, denoted by alpha
+Type II Error - reject H1 when it is true, denoted by beta
+
+Confidence Levels ----
+The confidence level is the frequency of possible confidence intervals that contain the true value of their corresponding parameter
+A confidence interval is a type of interval estimate that is computed from the observed data
+Confidence interval for a normal distribution is evaluated for continuous variables like sales in dollars, income of customers, etc.
+
+critical region
+The sampling distribution of a test statistic has two regions - a region of rejection (critical region) and a region of acceptance.
+
+
+
