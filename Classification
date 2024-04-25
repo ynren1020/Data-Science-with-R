@@ -1,0 +1,63 @@
+Classification is a technique to determine the extent to which a data sample will or will not be a part of a category or type.
+Classification models predict categorical class labels.
+
+Classification process ----
+The classification process includes the following techniques for prediction:
+Model Construction
+-It is done to describe a set of predetermined classes.
+-Every sample belongs to a predefined class.
+-The model is represented as decision trees, classification rules, or mathematical formulae.
+
+Model Usage
+-It is done to classify unknown or future objects and to estimate the accuracy of a model.
+-The accuracy rate is the percentage of the test set samples correctly classified by the model. In the case of acceptable accuracy, 
+the model is used for classifying data samples with unknown class labels.
+
+
+Logistic regression ----
+Model the probability distribution of output y as 1 or 0. This is called as sigmoid probability (sigma)
+if sigma > 0.5 then set y = 1 else set y = 0. (question - if the distribution of 0 and 1 is not equally 0.5, the criteria or threshold here should be changed?)
+S(x) = 1/(1+e^x) The points lying on the sigmoid function fits are either classified as positive or negative cases. A threshold is decided for classifying the cases. (Here is how the threshold being used, professor
+can use 0.7 as the threshold when quite a lot of students passing an exam, or he can use as low as 0.2 as the threshold when only a few passing the exam (with 0.5 ) )
+
+Support Vector Machines ----
+SVMs involve detecting hyperplanes (decision boundary) which segregate data into classes.
+The objective of optimization is to maximize the distance between the data points (support vectors) and the hyperplane. The distance is called the margin.
+The outcome (0 and 1) should be factor variable.
+
+libary(e1701)
+svm_churn <- svm(Churn ~ ., data = churn_train)
+library(caret)
+confusionMatrix(churn_train$Churn, predict(svm_churn), positive='1') # need specify positive='1' otherwise will predict 0
+# prediction on test dataset and then check confusionMatrix
+
+K-Nearest Neighbors (KNN) ----
+K-nearest neighbors is an algorithm that classifies data points by a majority vote of its k neighbors.
+It is used to assign a data point to clusters based on similarity measurement.
+A new input point is classified in the category such that it has the most number of neighbors from that category.
+
+Steps of the algorithm
+-calculate the distance of the unknown data points with other training data points, i.e. choose the number of k and a distance metric.
+-identify k-nearest neighbors
+-use category of nearest neighbors to find the category of the new data points based on majority vote.
+
+Choosing the value of k
+When choosing the value of k, keep the following points in mind:
+- if its value is too small, neighborhood is sensitive to noise points
+- if its value is too large, neighborhood may include points from other classes
+
+Computing Distance and Determining Class
+For the nearest neighbor classifiers, the distance between two points is expressed in the form of Euclidean distance, which is calculated by
+d = sqrt((x1-x1)^2 + (y2-y1)^2)
+
+Naive Bayes Classifier ----
+This is a probabilistic model which assumes conditional independence between features.
+Given a set of features, Naive Bayes classifier is used to predict a class using probability.
+
+Decision Tree Classification
+A decision tree is a graph that makes use of branching method to demonstrate every possible outcome of a decision.
+
+
+
+
+
