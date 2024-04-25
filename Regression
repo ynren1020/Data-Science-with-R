@@ -1,0 +1,11 @@
+Regression analysis is a technique used to estimate the relationship between variables and predict the value of one variable (dependent variable) on the basis of other variables (independent variables).
+
+Types of regression analysis models ----
+Linear regression 
+  - simple linear - method of least squares - coefficient of multiple determination - standard error of the estimate - dummy variable - interaction
+Non-linear regression
+  - polynomial - logarithmic - square root - reciprocal - exponential
+
+standard deviation is for the population, standard error is for the sample.
+  
+
