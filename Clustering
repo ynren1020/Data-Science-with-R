@@ -1,0 +1,12 @@
+Clustering methods
+Prototype-based clustering 
+- (K-means, use centroid to calculate distance to each data points) assigning training data to match clusters based on similarity; Iterative process to get data points in the best clusters possible 
+- Case study with time series data of unemployment data for 50 states
+- numeric variable, factor or categorical will introduce NA which generate error when fit K-means model
+
+Hierarchical clustering
+- Agglomerative (bottom up) - Divisive (Top down)
+- case study (25 countries with 9 sources of protein intake)
+Density-based clustering 
+- (DBSCAN, Density-Based Spatial Clustering and Application with Noise) is used to identify clusters of any shape in a dataset containing noise and outliers.
+
