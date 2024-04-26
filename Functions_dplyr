@@ -1,0 +1,15 @@
+select(,start_with); select(,end_with); select(,contains=); select(,matches=()) # select columns
+
+filter() # filter rows based on conditions
+
+arrange() # order rows based on specific variables 
+
+mutate() # create new variables 
+
+summarize() 
+
+# rename 
+library(plyr)
+bc <- rename(bc, c("i...age" = "Age") # rename i...age to Age
+
+
