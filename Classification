@@ -57,6 +57,69 @@ Given a set of features, Naive Bayes classifier is used to predict a class using
 Decision Tree Classification
 A decision tree is a graph that makes use of branching method to demonstrate every possible outcome of a decision.
 
+Random forest ----
+A random forest can be considered an ensemble of decision trees. It builds and combines multiple decision trees to get a more accurate prediction.
+Each of the decision tree models used is weak when employed on its own, but it becomes stable when put together.
+They are called random because they operate by choosing predictors randomly at the time of training the model.
+They are called forests because they take the output of multiple decision trees to make a decision.
+
+Random forest algorithm steps to follow
+1. Draw a random bootstrap sample of size n (randomly choose n samples from the training set).
+2. Grow a decision tree from the bootstrap sample. At each node, randomly select d features.
+3. Split the node using the feature that provides best split according to objective function, for instance by maximizing the information gain.
+4. Repeat the steps 1 to 2 k times (k is the number of trees you want to create, using a subset of samples).
+5. Aggregate the prediction by each tree for a new data point to assign the class label by majority vote (pick the group selected by most number of trees and assign new data point to that group).
+
+
+Evaluating Classifier Models ----
+Evaluating a model is important to know the accuracy and performance of a model.
+To evaluate a model, different metrics are used:
+- Confusion Matrix
+- Gain and Lift Chart
+- Kolmogorov Smirnov Chart
+- AUC - ROC curve
+- Gini Coefficient
+- Concordant - Discordant Ratio
+- Root Mean Squared Error
+
+A Confusion Matrix examines all possible outcomes of prediction: true positive, true negative, false positive and false negative.
+False positives are like false alarms. They are called Type I error. They occur when a negative occurrence is wrongly classified as positive.
+False negatives are also called Type II error. They occur when a positive occurence is wrongly classified as negative.
+
+The parameters calculated from a confusion matrix are:
+Accuracy rate: The proportion of the total number of predictions that were right. 
+Precision/Positive Predicted Value: The proportion of positive cases that were correctly identified.
+Negative Predictive value: The proportion of negative cases that were correctly identified.
+Recall/Sensitivity/True Positive Rate: The proportion of actual positive cases which are correctly identified.
+Specificity/True Negative Rate: The proportion of actual negative cases which are correctly identified.
+
+Accuracy rate = (TP + TN)/(TP + TN + FP + FN)
+Precision (Positive Predicted Value) = TP/(TP + FP)
+Recall (Sensitivity or True Positive Rate) = TP/(TP + FN)
+Specificity (True negative rate) = TN/(TN + FP)
+
+AUC - ROC curve 
+
+Bias Variance Trade-off
+Bias variance trade-off determines the model's ability to keep bias and variance to the minimum.
+Bias is a measure of error on how much the predicated values differ from the actual value.
+Variance indicates an algorithm's sensitivity to small changes in the training dataset.
+The error in a predictive model can be summarized as a summation of bias, variance, and irreducible error.
+Irreducible error, also known as noise, cannot be reduced by any algorithm.
+The goal of any classification algorithm is to achieve low bias and low variance.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
